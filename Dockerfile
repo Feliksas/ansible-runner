@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 RUN apt update
-RUN apt -y install python3-pip
+RUN apt -y install python3-pip openssh-client openssl
 RUN adduser --uid 1000 ansible
 USER ansible
 RUN pip3 install ansible ansible-core ansible-lint boto3 botocore cryptography
