@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 RUN apt update
-RUN apt upgrade
+RUN apt -y upgrade
 RUN apt -y install python3-pip openssh-client openssl sudo
 RUN adduser --uid 1000 ansible
 USER ansible
